@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CardDeck, Container } from 'react-bootstrap';
+import { CardDeck} from 'react-bootstrap';
 import fakeData from '../../fakedata/fakedata.json';
 import Cards from '../Cards/Cards';
 import './LandingPage.css';

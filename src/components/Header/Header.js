@@ -15,7 +15,7 @@ const Header = () => {
           <Nav.Link><Link to="/destination">Destination</Link></Nav.Link>
           <Nav.Link>
             {
-             loggedInUser.email ? <span>{loggedInUser.name}</span> : <Link to="/login">Login</Link>
+             loggedInUser.email ? <span>{loggedInUser.displayName}</span> : <Link to="/login">Login</Link>
             }
           </Nav.Link>
         </Nav>

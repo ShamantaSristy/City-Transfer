@@ -10,7 +10,7 @@ const Cards = (props) => {
     const getTransport = ((id) => {
         const url = `/destination/${id}`
         history.push(url);
-    })
+    });
 
     return (
         <div className="cardDeck" onClick={() => getTransport(id)}>

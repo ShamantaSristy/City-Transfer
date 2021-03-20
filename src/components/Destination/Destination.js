@@ -1,15 +1,15 @@
 import React from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import './DestinationInput';
 import DestinationInput from './DestinationInput';
-import map from '../../assets/map.png';
+import GoogleMap from '../GoogleMap/GoogleMap';
 
 const Destination = () => {
     return (
         <Container>
             <Row>
                 <Col sm={4}><DestinationInput></DestinationInput></Col>
-                <Col sm={8}><Image style={{marginTop :'5vh'}} src={map} fluid/></Col>
+                <Col sm={8}><GoogleMap></GoogleMap></Col>
             </Row>
         </Container>
     );
