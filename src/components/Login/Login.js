@@ -85,7 +85,7 @@ const Login = () => {
                     newUserInfo.userCreated = true;
                     setUser(newUserInfo);
                     updateUserName(user.name);
-                    //   console.log('loggedin user mail',loggedInUser.email);
+                      console.log('loggedin user mail',loggedInUser.email);
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user };
@@ -102,9 +102,16 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.userCreated = true;
                     setUser(newUserInfo);
-                    setLoggedInUser(newUserInfo);
+                    const {displayName,email,photoURL} = res.user;
+                    const myUser = {
+                        isSignedIn: true,
+                        name: displayName,
+                        email: email,
+                        photo: photoURL
+                    }
+                    setLoggedInUser(myUser);
                     history.replace(from);
-                    //   console.log('sign in user info', res.user);
+                      console.log('sign in user info', res.user);
                     console.log('loggedin user mail', loggedInUser.email);
                 })
                 .catch((error) => {
@@ -170,12 +177,12 @@ const Login = () => {
                     <label htmlFor="newUser">New User Sign Up</label>
                     <br />
                     {
-                        newUser && <input type="text" name="name" onBlur={handleBlur} placeholder="Your name" />
+                        newUser && <input type="text" required name="name" onBlur={handleBlur} placeholder="Your name" />
                     }
                     <br />
-                    <input type="text" onBlur={handleBlur} name="email" placeholder="Enter your email address" />
+                    <input type="text" onBlur={handleBlur} required name="email" placeholder="Enter your email address" />
                     <br />
-                    <input type="password" name="password" onBlur={handleBlur} placeholder="Your password" />
+                    <input type="password" required name="password" onBlur={handleBlur} placeholder="Your password" />
                     <br />
                     <input type="submit" value={newUser ? 'Sign up' : 'Sign in'} />
                 </form>
@@ -187,6 +194,7 @@ const Login = () => {
 
 
             <button onClick={handleGoogleSignIn}>Sign in with Google</button>
+            <br/>
             <br/>
             <button onClick={handleSignOut}>Sign Out</button>
         </div>

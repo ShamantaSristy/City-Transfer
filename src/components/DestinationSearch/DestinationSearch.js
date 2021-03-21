@@ -23,7 +23,7 @@ const DestinationSearch = () => {
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         {/* <Form.Label>From</Form.Label> */}
-                        <Form.Control type="text" placeholder="From where" />
+                        <Form.Control type="text" placeholder="From" />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
@@ -34,7 +34,7 @@ const DestinationSearch = () => {
                         <form className={classes.container} noValidate>
                             <TextField
                                 id="datetime-local"
-                                label="Next appointment"
+                                label="Arrival Time"
                                 type="datetime-local"
                                 defaultValue="2021-05-24T10:30"
                                 className={classes.textField}

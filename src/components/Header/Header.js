@@ -7,7 +7,7 @@ import './Header.css';
 import CommuteIcon from '@material-ui/icons/Commute';
 
 const Header = () => {
-  const [loggedInUser] = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 
     return (
@@ -17,9 +17,9 @@ const Header = () => {
           <Nav.Link><Link className="link" to="/home"><h5>Home</h5></Link></Nav.Link>
           <Nav.Link><Link className="link" to="/destination"><h5>Destination</h5></Link></Nav.Link>
           <Nav.Link>
-          
-             <Link className="link" to="/login">{loggedInUser.email ? <span>{loggedInUser.displayName}</span> : <span><h5>Login</h5></span>}</Link>
-            
+                {
+                    loggedInUser.email ? <span>{loggedInUser.name}</span> : <Link className="link" to="/login">Login</Link>
+                }
           </Nav.Link>
         </Nav>
       </Navbar>
