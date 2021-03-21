@@ -48,13 +48,13 @@ const Login = () => {
                 setUser(signedInUser);
                 setLoggedInUser(signedInUser);
                 history.replace(from);
-                // console.log('loggedin user mail',loggedInUser.email);
+                console.log('loggedin user mail',loggedInUser.email);
             }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 var email = error.email;
                 var credential = error.credential;
-                // console.log(errorMessage, errorCode, email, credential);
+                console.log(errorMessage, errorCode, email, credential);
             });
     }
 
