@@ -152,12 +152,8 @@ const Login = () => {
     }
 
     return (
-        <div>
-            {
-                user.isSignedIn ? <button onClick={handleSignOut}>Sign Out</button> :
-                    <button onClick={handleGoogleSignIn}>Sign in</button>
-            }
-            <br />
+        <div style={{backgroundColor: '#e4d3cf',
+                      height: '100vh'}}>
             {
                 user.isSignedIn && <div>
                     <img src={user.photo} alt={user.name} />
@@ -167,7 +163,7 @@ const Login = () => {
             }
 
             <div>
-                <h1>Our own authentication system</h1>
+                <h1>Please Login First</h1>
 
                 <form action="" onSubmit={handleSubmit}>
                     <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
@@ -191,6 +187,8 @@ const Login = () => {
 
 
             <button onClick={handleGoogleSignIn}>Sign in with Google</button>
+            <br/>
+            <button onClick={handleSignOut}>Sign Out</button>
         </div>
     );
 };

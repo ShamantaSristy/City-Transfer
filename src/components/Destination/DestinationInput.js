@@ -19,6 +19,7 @@ const DestinationInput = () => {
                 searchCase ? <RideOptions></RideOptions> : <DestinationSearch></DestinationSearch> 
             }
             <div>
+                <br/>
             <Button onClick={handleSearch}>Search</Button>
             </div>
         </div>

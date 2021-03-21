@@ -27,7 +27,7 @@ const classes = useStyles();
 
     return (
         <div>
-            <h3>Options? 😉</h3>
+            <h3>Available Rides 🚗</h3>
             <List className={classes.root}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
@@ -45,7 +45,7 @@ const classes = useStyles();
               >
                 Ali Connors
               </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
+              {/* {" — I'll be in your neighborhood doing errands this…"} */}
             </React.Fragment>
           }
         />
@@ -67,7 +67,7 @@ const classes = useStyles();
               >
                 to Scott, Alex, Jennifer
               </Typography>
-              {" — Wish I could come, but I'm out of town this…"}
+              {/* {" — Wish I could come, but I'm out of town this…"} */}
             </React.Fragment>
           }
         />
@@ -89,7 +89,7 @@ const classes = useStyles();
               >
                 Sandra Adams
               </Typography>
-              {' — Do you have Paris recommendations? Have you ever…'}
+              {/* {' — Do you have Paris recommendations? Have you ever…'} */}
             </React.Fragment>
           }
         />
