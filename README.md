@@ -1,13 +1,8 @@
-# `City Transfer`
-Live link: <a href="https://city-transfer-5231c.web.app">`City Transfer`</a>
+# City Transfer
+Live site: [https://city-transfer-5231c.web.app]
 
 ## About
 
-            A simple ride-sharing app that will help 
-            users choose rides of their preference, search for
-             location with activated realtime map.
-
-            This site has firebase authentication system.
-            You can login with you Email and Password or Gmail.
-
-            We are using react route and private route so you have to login first to see our services.
+**City Transfer** simple ride-sharing app where users have four options of rides. They can  choose rides of their preferences.
+- Users can search for their destination with **Google map**.
+- Google authentication system activated with Email and Password authentication.
